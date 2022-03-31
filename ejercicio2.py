@@ -1,13 +1,13 @@
-numeros = []
+alfabeto=('AaBbCcDdEeFfGgHhIiJjKkLlMmNnÑñOoPpQqRrSsTtUuVvWwXxYyZz')
+texto=input("inserte una palabra: ")
+contar=0
 
-for i in range(3):
-  numero = float(input("Introduce el número #{}: ".format(i + 1)))
-  numeros.append(numero)
-
-menor = numeros[0]
-
-for numero in numeros:
-    if numero < menor:
-        menor = numero
-
-print("Menor:", menor)
+for i in texto:
+    if i in alfabeto:
+        contar+=1
+    else:
+        print('se ha encontrado caracteres no alfabeticos')
+        break
+if contar==len(texto):
+    print('se ha encontrado caracteres alfabeticos')
+            
